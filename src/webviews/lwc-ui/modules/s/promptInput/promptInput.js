@@ -56,7 +56,7 @@ export default class PromptInput extends I18nMixin(LightningElement) {
     // inner <input> element after a short delay to ensure it is rendered.
     setTimeout(() => {
       try {
-        const filterHost = this.querySelector(
+        const filterHost = this.template.querySelector(
           ".prompt-combobox-filter",
         );
         if (!filterHost) return;
@@ -126,7 +126,7 @@ export default class PromptInput extends I18nMixin(LightningElement) {
 
   renderedCallback() {
     // Update the prompt message content manually to properly handle HTML entities
-    const messageElement = this.querySelector(
+    const messageElement = this.template.querySelector(
       ".prompt-message-content",
     );
     if (messageElement && this.currentPrompt && this.currentPrompt.message) {
@@ -289,7 +289,7 @@ export default class PromptInput extends I18nMixin(LightningElement) {
           return;
         }
         // Find the cancel button by its label attribute
-        let cancelBtn = this.querySelector(
+        let cancelBtn = this.template.querySelector(
           'lightning-button[data-id="cancelBtn"]',
         );
         if (cancelBtn && cancelBtn.focus) {
@@ -328,7 +328,7 @@ export default class PromptInput extends I18nMixin(LightningElement) {
           this.focusedButtonIndex = 0;
           const firstValue =
             this.selectOptions[0] && this.selectOptions[0].value;
-          const buttons = this.querySelectorAll(
+          const buttons = this.template.querySelectorAll(
             ".select-option-button",
           );
           // Find the button whose data-value matches the first selectOption value
@@ -340,7 +340,7 @@ export default class PromptInput extends I18nMixin(LightningElement) {
           }
           firstInput = btnToFocus || buttons[0];
         } else {
-          firstInput = this.querySelector(
+          firstInput = this.template.querySelector(
             "lightning-input, lightning-combobox",
           );
         }
@@ -681,7 +681,7 @@ export default class PromptInput extends I18nMixin(LightningElement) {
     // Focus the button whose data-value matches the selectOption value
     const nextValue =
       this.selectOptions[nextIndex] && this.selectOptions[nextIndex].value;
-    const buttons = this.querySelectorAll(".select-option-button");
+    const buttons = this.template.querySelectorAll(".select-option-button");
     const btnToFocus = Array.from(buttons).find(
       (btn) => btn.dataset.value === nextValue,
     );
@@ -807,7 +807,7 @@ export default class PromptInput extends I18nMixin(LightningElement) {
   // Helper method to get the current value from the DOM input elements
   updateInputValueFromDOM() {
     if (this.isTextInput || this.isNumberInput) {
-      const lightningInput = this.querySelector("lightning-input");
+      const lightningInput = this.template.querySelector("lightning-input");
       if (lightningInput && lightningInput.value !== undefined) {
         this.inputValue = lightningInput.value;
       }

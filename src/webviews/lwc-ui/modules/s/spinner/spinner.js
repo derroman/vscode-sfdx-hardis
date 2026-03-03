@@ -69,8 +69,8 @@ export default class LightningSpinner extends LightningElement {
     super.connectedCallback();
     this.classList.add("slds-spinner_container");
     if (isCSR) {
-      this.addEventListener("mousewheel", this.stopScrolling);
-      this.addEventListener("touchmove", this.stopScrolling);
+      this.template.addEventListener("mousewheel", this.stopScrolling);
+      this.template.addEventListener("touchmove", this.stopScrolling);
     }
   }
 

@@ -34,7 +34,7 @@ export default class Welcome extends I18nMixin(ColorThemeMixin(LightningElement)
   }
 
   handleOutsideClick(event) {
-    if (!this.contains(event.target)) {
+    if (!this.template.contains(event.target)) {
       this.langDropdownOpen = false;
       this.themeDropdownOpen = false;
       document.removeEventListener("click", this._boundHandleOutsideClick);
@@ -46,7 +46,7 @@ export default class Welcome extends I18nMixin(ColorThemeMixin(LightningElement)
     const shouldHide = window.scrollY > this.scrollThreshold;
     this.setupHidden = shouldHide;
 
-    const heroElements = this.querySelectorAll(".hero-settings, .hero-top-left");
+    const heroElements = this.template.querySelectorAll(".hero-settings, .hero-top-left");
     heroElements.forEach((element) => {
       element.classList.toggle("hidden", shouldHide);
     });
