@@ -10,6 +10,7 @@ import { I18nMixin } from "s/i18nMixin";
  * - AI provider & doc deployment settings
  */
 export default class DocumentationConfig extends I18nMixin(ColorThemeMixin(LightningElement)) {
+  static renderMode = 'light';
   // Config
   @track configLoading = true;
   @track configSections = [];

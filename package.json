@@ -626,7 +626,6 @@
     "@lwc/babel-plugin-component": "^8.25.1",
     "@lwc/engine-dom": "^8.25.1",
     "@lwc/module-resolver": "^8.25.1",
-    "@lwc/synthetic-shadow": "^8.25.1",
     "@salesforce-ux/design-system": "2.29.0",
     "@types/fs-extra": "^11.0.4",
     "@types/git-url-parse": "^9.0.1",

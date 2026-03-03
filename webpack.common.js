@@ -139,7 +139,6 @@ const lwcWebviewConfig = {
           npm: "lightning-base-components",
         },
       ],
-      experimentalSyntheticShadow: true,
       experimentalDynamicComponent: true,
       enableDynamicComponents: true,
     }),

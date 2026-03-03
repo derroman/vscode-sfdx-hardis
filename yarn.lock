@@ -1594,7 +1594,7 @@
     postcss-selector-parser "~7.1.1"
     postcss-value-parser "~4.2.0"
 
-"@lwc/synthetic-shadow@8.28.2", "@lwc/synthetic-shadow@^8.25.1":
+"@lwc/synthetic-shadow@8.28.2":
   version "8.28.2"
   resolved "https://registry.yarnpkg.com/@lwc/synthetic-shadow/-/synthetic-shadow-8.28.2.tgz#cddba720ee46f1aeaa6694242ce9d8fe6b91ea90"
   integrity sha512-RZZBUHQ8TdG+foC2sS8qx9rUL8A7trttlglOQlTqPaoBKWb92TjQP7FLmOG5By4w4lSCBFxjedfrtDMT7zIdFQ==

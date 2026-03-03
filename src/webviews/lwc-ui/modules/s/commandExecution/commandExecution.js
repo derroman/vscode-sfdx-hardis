@@ -7,6 +7,7 @@ import PromptInput from "s/promptInput";
 import { I18nMixin } from "s/i18nMixin";
 
 export default class CommandExecution extends I18nMixin(LightningElement) {
+  static renderMode = 'light';
   // Track user-toggled expanded state for sections in simple mode
   userSectionExpandState = {}; // { [sectionId]: boolean }
   // Table logs storage (sectionId -> table data)

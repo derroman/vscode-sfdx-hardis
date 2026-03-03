@@ -12,6 +12,7 @@ const METADATA_DOC_BASE_URL =
   "https://sf-explorer.github.io/sf-doc-to-json/#/cloud/all/object/";
 
 export default class MetadataRetriever extends I18nMixin(LightningElement) {
+  static renderMode = 'light';
   @api orgs = [];
   @api metadataTypes = [];
   @track selectedOrg = null;

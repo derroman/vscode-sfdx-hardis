@@ -1,6 +1,7 @@
 import { LightningElement, api, track } from "lwc";
 
 export default class MultilineHelptext extends LightningElement {
+  static renderMode = 'light';
   @api content; // can contain \n or HTML (rendered safely by lightning-formatted-rich-text)
   @track visible = false;
   @track positionLeft = false;

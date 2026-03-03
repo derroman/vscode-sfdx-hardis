@@ -2,6 +2,7 @@ import { LightningElement, api } from "lwc";
 import { I18nMixin } from "s/i18nMixin";
 
 export default class ApexTestsSelect extends I18nMixin(LightningElement) {
+  static renderMode = 'light';
   @api availableClasses = [];
   @api value = [];
 
