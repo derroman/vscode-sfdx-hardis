@@ -262,7 +262,7 @@ export default class OrgManager extends I18nMixin(LightningElement) {
     // Try to gather usernames from tracked selection; if empty, fallback to the datatable's selected rows
     let usernames = (this.selectedRowKeys || []).slice();
     if (!usernames || usernames.length === 0) {
-      const table = this.template.querySelector("lightning-datatable");
+      const table = this.querySelector("lightning-datatable");
       if (table && typeof table.getSelectedRows === "function") {
         const rows = table.getSelectedRows() || [];
         usernames = rows.map((r) => r.username).filter(Boolean);

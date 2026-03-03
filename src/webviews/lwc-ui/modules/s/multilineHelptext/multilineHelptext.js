@@ -41,8 +41,8 @@ export default class MultilineHelptext extends LightningElement {
   @track isHoveringPopover = false;
 
   calculatePosition() {
-    const popover = this.template.querySelector(".multiline-helptext-popover");
-    const wrapper = this.template.querySelector(".helptext-wrapper");
+    const popover = this.querySelector(".multiline-helptext-popover");
+    const wrapper = this.querySelector(".helptext-wrapper");
 
     if (!popover || !wrapper) return;
 

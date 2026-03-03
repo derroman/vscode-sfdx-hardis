@@ -687,11 +687,11 @@ export default class Pipeline extends I18nMixin(LightningElement) {
 
   adjustPrColumns() {
     try {
-      const dt = this.template.querySelector("lightning-datatable");
+      const dt = this.querySelector("lightning-datatable");
       // fallback container
       const container =
-        this.template.querySelector(".pipeline-card-spacing") ||
-        this.template.querySelector(".pipeline-container");
+        this.querySelector(".pipeline-card-spacing") ||
+        this.querySelector(".pipeline-container");
       const rect = dt
         ? dt.getBoundingClientRect()
         : container
@@ -921,8 +921,8 @@ export default class Pipeline extends I18nMixin(LightningElement) {
   }
 
   renderMermaid() {
-    const mermaidDiv = this.template.querySelector(".mermaid");
-    const debugDiv = this.template.querySelector(".mermaid-debug");
+    const mermaidDiv = this.querySelector(".mermaid");
+    const debugDiv = this.querySelector(".mermaid-debug");
     // Only set error if pipelineData.orgs exists and has length
     if (!mermaidDiv) {
       if (
@@ -973,7 +973,7 @@ export default class Pipeline extends I18nMixin(LightningElement) {
         console.log("Mermaid diagram rendered successfully");
 
         // Catch clicks on Nodes
-        const mermaidSvg = this.template.querySelector(".mermaid svg");
+        const mermaidSvg = this.querySelector(".mermaid svg");
         if (mermaidSvg) {
           this._decorateMermaidNodes(mermaidSvg);
           mermaidSvg.addEventListener("click", (event) => {
@@ -1014,7 +1014,7 @@ export default class Pipeline extends I18nMixin(LightningElement) {
     // Apply CSS animations to any Mermaid link containing running/pending emojis
     // The key insight: edge labels and edge paths are in SEPARATE sibling groups
     // We need to match them by index position
-    const mermaidSvg = this.template.querySelector(".mermaid svg");
+    const mermaidSvg = this.querySelector(".mermaid svg");
     if (!mermaidSvg) {
       console.warn("Mermaid SVG not found for animation");
       return;

@@ -824,7 +824,7 @@ export default class PackageXml extends I18nMixin(ColorThemeMixin(LightningEleme
       return;
     }
 
-    const input = this.template.querySelector('[data-modal-input="new-entry"]');
+    const input = this.querySelector('[data-modal-input="new-entry"]');
     if (input && typeof input.focus === "function") {
       // Defer focus until DOM is painted to avoid race conditions.
       window.requestAnimationFrame(() => {

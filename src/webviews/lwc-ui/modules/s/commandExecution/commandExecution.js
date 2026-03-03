@@ -52,7 +52,7 @@ export default class CommandExecution extends I18nMixin(LightningElement) {
     // Handle scrolling state
     this.userScrolledUp = false;
     setTimeout(() => {
-      const rootContainer = this.template.querySelector(".command-execution");
+      const rootContainer = this.querySelector(".command-execution");
       if (rootContainer) {
         rootContainer.addEventListener("scroll", () => {
           const threshold = 500; // px, require user to scroll way up
@@ -285,7 +285,7 @@ export default class CommandExecution extends I18nMixin(LightningElement) {
 
     // Ensure the embedded promptInput is initialized after rendering
     setTimeout(() => {
-      const promptInput = this.template.querySelector("s-prompt-input");
+      const promptInput = this.querySelector("s-prompt-input");
       if (promptInput && typeof promptInput.initialize === "function") {
         promptInput.initialize(this.embeddedPromptData);
       }
@@ -1890,7 +1890,7 @@ ${resultMessage}`;
     // Only scroll if user has not scrolled up
     if (this.userScrolledUp) return;
     requestAnimationFrame(() => {
-      const rootContainer = this.template.querySelector(".command-execution");
+      const rootContainer = this.querySelector(".command-execution");
       if (rootContainer) {
         rootContainer.scrollTop = rootContainer.scrollHeight;
       }
@@ -1990,10 +1990,10 @@ ${resultMessage}`;
     // Close any other open dropdowns
     this.closeAllDropdowns();
 
-    const container = this.template.querySelector(
+    const container = this.querySelector(
       `[data-report-id="${reportId}"].report-dropdown-container`,
     );
-    const dropdown = this.template.querySelector(
+    const dropdown = this.querySelector(
       `[data-report-id="${reportId}"].report-format-dropdown`,
     );
 
@@ -2077,7 +2077,7 @@ ${resultMessage}`;
 
   handleDocumentClick(event) {
     // Close dropdowns when clicking outside
-    const dropdownContainers = this.template.querySelectorAll(
+    const dropdownContainers = this.querySelectorAll(
       ".report-dropdown-container",
     );
     let clickedInside = false;
@@ -2095,10 +2095,10 @@ ${resultMessage}`;
 
   closeAllDropdowns() {
     // Close all open dropdowns
-    const containers = this.template.querySelectorAll(
+    const containers = this.querySelectorAll(
       ".report-dropdown-container",
     );
-    const dropdowns = this.template.querySelectorAll(".report-format-dropdown");
+    const dropdowns = this.querySelectorAll(".report-format-dropdown");
 
     containers.forEach((container) => {
       container.classList.remove("slds-is-open");

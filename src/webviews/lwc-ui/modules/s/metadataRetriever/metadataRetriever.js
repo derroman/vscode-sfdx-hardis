@@ -1058,10 +1058,10 @@ export default class MetadataRetriever extends I18nMixin(LightningElement) {
   // is visible in the viewport and whether there are selected rows.
   checkRetrieveButtonVisibility() {
     try {
-      const floating = this.template.querySelector(
+      const floating = this.querySelector(
         '[data-id="retrieve-button-floating"]',
       );
-      const mainBtn = this.template.querySelector(
+      const mainBtn = this.querySelector(
         '[data-id="retrieve-button"]',
       );
 
@@ -1095,7 +1095,7 @@ export default class MetadataRetriever extends I18nMixin(LightningElement) {
     } catch (e) {
       // In case of any unexpected DOM issues, hide the floating button to be safe
       try {
-        const floating = this.template.querySelector(
+        const floating = this.querySelector(
           '[data-id="retrieve-button-floating"]',
         );
         if (floating) {
