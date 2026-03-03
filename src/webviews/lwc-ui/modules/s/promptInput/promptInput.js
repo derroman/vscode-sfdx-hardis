@@ -6,7 +6,7 @@ import { LightningElement, api, track } from "lwc";
 import { I18nMixin } from "s/i18nMixin";
 
 export default class PromptInput extends I18nMixin(LightningElement) {
-  static renderMode = 'light';
+
   // Track the index of the currently focused button for select-with-buttons
   focusedButtonIndex = 0;
   @api promptData = null;

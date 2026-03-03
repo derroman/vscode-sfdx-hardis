@@ -3,7 +3,7 @@ import { ColorThemeMixin } from "s/colorThemeMixin";
 import { I18nMixin } from "s/i18nMixin";
 
 export default class ExtensionConfig extends I18nMixin(ColorThemeMixin(LightningElement)) {
-  static renderMode = 'light';
+
   @track sections = [];
   @track loading = true;
   @track error = null;

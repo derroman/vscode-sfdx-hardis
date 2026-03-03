@@ -2,7 +2,7 @@ import { LightningElement, api, track } from "lwc";
 import { I18nMixin } from "s/i18nMixin";
 
 export default class OrgManager extends I18nMixin(LightningElement) {
-  static renderMode = 'light';
+
   @track orgs = [];
   @track columns = [];
   @track selectedRowKeys = [];

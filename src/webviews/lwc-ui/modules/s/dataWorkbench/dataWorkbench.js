@@ -63,7 +63,7 @@ function createDefaultObject() {
 }
 
 export default class DataWorkbench extends I18nMixin(ColorThemeMixin(LightningElement)) {
-  static renderMode = 'light';
+
   workspaces = [];
   selectedWorkspace = null;
   isLoading = false;

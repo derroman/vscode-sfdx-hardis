@@ -14,7 +14,7 @@ import { I18nMixin } from "s/i18nMixin";
  *  - Open configuration panel for advanced options
  */
 export default class DocumentationWorkbench extends I18nMixin(ColorThemeMixin(LightningElement)) {
-  static renderMode = 'light';
+
   // Generation options (state tracked here, synced with config panel)
   @track generatePdf = false;
   @track generateExcel = false;

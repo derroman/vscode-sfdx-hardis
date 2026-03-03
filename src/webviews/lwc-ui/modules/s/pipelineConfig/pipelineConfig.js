@@ -13,7 +13,7 @@ import { I18nMixin } from "s/i18nMixin";
  *   availableBranches: array of available branch names for selection
  */
 export default class PipelineConfig extends I18nMixin(LightningElement) {
-  static renderMode = 'light';
+
   @api config = {};
   @api branchConfig = null;
   @api globalConfig = null;

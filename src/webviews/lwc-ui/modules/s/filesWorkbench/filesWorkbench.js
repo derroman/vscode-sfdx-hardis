@@ -3,7 +3,7 @@ import { ColorThemeMixin } from "s/colorThemeMixin";
 import { I18nMixin } from "s/i18nMixin";
 
 export default class FilesWorkbench extends I18nMixin(ColorThemeMixin(LightningElement)) {
-  static renderMode = 'light';
+
   workspaces = [];
   selectedWorkspace = null;
   isLoading = false;

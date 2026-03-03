@@ -6,7 +6,7 @@ import { LightningElement, api, track } from "lwc";
 import { I18nMixin } from "s/i18nMixin";
 
 export default class Pipeline extends I18nMixin(LightningElement) {
-  static renderMode = 'light';
+
   @track prButtonInfo;
   enableDeploymentApexTestClasses = false;
   @track gitAuthenticated = false;

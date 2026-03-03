@@ -7,7 +7,7 @@ import { ColorThemeMixin } from "s/colorThemeMixin";
 import { I18nMixin } from "s/i18nMixin";
 
 export default class Welcome extends I18nMixin(ColorThemeMixin(LightningElement)) {
-  static renderMode = 'light';
+
   @track isLoading = false;
   @track showWelcomeAtStartup = true;
   @track colorThemeConfig = "auto";

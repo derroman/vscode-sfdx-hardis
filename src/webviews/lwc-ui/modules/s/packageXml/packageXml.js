@@ -18,7 +18,7 @@ const createEmptyPackageData = () => ({
 });
 
 export default class PackageXml extends I18nMixin(ColorThemeMixin(LightningElement)) {
-  static renderMode = 'light';
+
   @track packageData = createEmptyPackageData();
   @track isLoading = true;
   @track hasError = false;
